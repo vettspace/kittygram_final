@@ -42,7 +42,7 @@ Kittygram - это современная социальная платформ�
 
 1. Клонируйте репозиторий:
 ```bash
-git clone <repository-url>
+git clone https://github.com/vettspace/kittygram_final.git
 cd kittygram
 ```
 
