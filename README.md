@@ -1,4 +1,5 @@
-# Kittygram - Социальная сеть для любителей кошек
+# Kittygram
+### Социальная сеть для любителей кошек
 
 ![Статус сборки](https://github.com/vettspace/kittygram_final/actions/workflows/main.yml/badge.svg)
 
