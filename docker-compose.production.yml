@@ -21,6 +21,8 @@ services:
       - static:/backend_static
       - media:/app/media
       - ./collected_static:/app/collected_static
+    depends_on:
+      - kittygram
 
   frontend:
     image: vettspace/kittygram_frontend
@@ -37,3 +39,6 @@ services:
     volumes:
       - static:/staticfiles
       - media:/media
+    depends_on:
+      - backend
+      - frontend
