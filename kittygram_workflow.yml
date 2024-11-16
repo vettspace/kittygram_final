@@ -161,4 +161,8 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: Деплой успешно выполнен!
+          message: |
+            Деплой Kittygram успешно завершен!
+            Коммит: ${{ github.sha }}
+            Ветка: ${{ github.ref }}
+            Автор: ${{ github.actor }}

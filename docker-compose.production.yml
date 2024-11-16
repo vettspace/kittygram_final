@@ -11,25 +11,29 @@ services:
     env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
+
   backend:
     image: vettspace/kittygram_backend
     env_file: .env
     ports:
-      - "8080:8000"
+      - "8080:9000"
     volumes:
-      - static:/static
+      - static:/backend_static
       - media:/app/media
+      - ./collected_static:/app/collected_static
+
   frontend:
     image: vettspace/kittygram_frontend
     env_file: .env
-    command: cp -r /app/build/. /static/
+    command: cp -r /app/build/. /staticfiles/
     volumes:
-      - static:/static
+      - static:/staticfiles
+
   gateway:
     image: vettspace/kittygram_gateway
     env_file: .env
     ports:
       - 9000:80
     volumes:
-      - static:/static
+      - static:/staticfiles
       - media:/media
